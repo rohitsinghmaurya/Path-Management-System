@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+         /* body{
+         font-family:Arial, Helvetica, sans-serif ;
+    } */
+    /* .backtiled{
+         background-image: url('backgroundscreen.jpg');
+    } */
+
+
+    video{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         position: fixed;
+         z-index: -1;
+    }
+
+    *{
+         box-sizing: border-box;
+    }
+    .container{
+          position: relative;
+          border-radius: 5px;
+          background-color:#f2f2f2;
+          padding: 20px 0 30px 0;
+    }
+    input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; 
+}
+input:hover,
+.btn:hover{
+     opacity: 1;
+}
+.fb{
+     background-color:  #3B5998;
+     /* background-image: url('facebookimage.jpg'); */
+     color: white;
+}
+.twitter{
+      background-color: #55ACEE;
+      /* background-image: url('twitterimage.jpg'); */
+      color: white;
+}
+.google{
+     background-color:#EA4335;
+     /* background-image: url(googleimage.jpg); */
+     color: white;
+}
+
+input[type=submit]:hover {
+     background-color: #459ba0d7;
+}
+.row{
+    background-image: url('images.jpg');
+}
+.coi{
+      float: left;
+      width: 50%;
+      margin: auto;
+      padding: 0 50px;
+      margin-top: 6px;
+      
+}
+.row:after{
+     content: "";
+     display: table;
+     clear: both;
+}
+.vl{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      border: 2px solid #ddd;
+      height: 175px;
+}
+
+.vl-innertext{
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #f1f1f1;
+     border: 1px solid #ccc;
+     border-radius: 50%;
+     padding: 8px 10px;
+}
+
+.hide-md-lg {
+      display: none;
+}
+.bottom-container{
+      text-align: center;
+      background-color: #666;
+      border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 650px){
+    .coi{
+         width: 100%;
+         margin-top: 0;
+    }
+    .vl{
+         display: none;
+    }
+    .hide-md-lg{
+         display: block;
+         text-align: center;
+    }
+}
+   </style>
+</head>
+<body class="backtiled">
+
+     <video autoplay loop muted src="map video.mp4"></video>
+
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="row" style="background-image: url('download.jpg');">
+        <h2 style="text-align:center;color:white;font-weight: 700;">Login with Path Management System!</h2>
+        <div class="vl">
+         <span class="vl-innertext">or</span>
+        </div>
+        <div class="coi">
+           <a href="#" class="fb btn"><i class="fa fa-facebook fa-fw"></i>Login with Facebook</a>
+           <a href="#" class="twitter btn"><i class="fa fa-twitter fa-fw"></i>Login with Twitter</a>
+           <a href="#" class="google btn"><i class="fa fa-googlw fa-fw"></i>Login with Google</a>
+        </div>
+        <div class="coi">
+          <div class="hide-md-lg">
+            <p>Or</p>
+          </div>
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="submit" value="Login">
+        </div>
+      </div>
+      </form>
+    </div>
+    <div class="bottom-container">
+       <div class="row">
+          <div class="coi">
+            <a href="#" style="color:white" class="btn">Sign up</a>
+          </div>
+          <div class="coi">
+           <a href="#" style="color:white" class="btn">Forgot password?</a>
+          </div>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="contact.css">
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkdbLvyS-6gTFYSowG-rM_h7VaEzqYwWc"></script>
+
+</head>
+<body>
+    <video 
+     autoplay
+     loop
+     muted
+    src="video1.webm">
+  </video>
+
+  <div class="firstbox">
+     <h1>
+        Discover Your Path,<br>A Journey of Self-Exploration.
+     </h1>
+     <div class="location-container">
+          
+        <input type="text"
+         placeholder="Enter Your Current Location."
+         class="input1"
+        />
+        <input type="text"
+        placeholder="Enter Your Destination Location"
+        id="input2"
+        />
+
+     <button onclick="addLocation();showNearestLocation();" type="submit" id="findlocation">Add Location</button>
+     <button onclick="deleteTask()" style="margin-top: 20px;">Delete</button>
+
+      <div class="container">
+
+           <div class="task-box" id="taskbox"></div>
+
+         <div class="empty-box" id="emptybox"> 
+           
+
+         </div>
+
+         <div id="map"></div>
+
+       </div>
+
+     </div>
+  </div>
+     
+    <script src="contact.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkdbLvyS-6gTFYSowG-rM_h7VaEzqYwWc&callback=showNearestLocation()"
+        async defer></script>
+
+</body>
+</html>
