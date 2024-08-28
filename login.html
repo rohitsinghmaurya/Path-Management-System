@@ -5,9 +5,26 @@
          /* body{
          font-family:Arial, Helvetica, sans-serif ;
     } */
-    /* .backtiled{
-         background-image: url('backgroundscreen.jpg');
-    } */
+   
+
+    
+    .content{
+       width: 100%;
+       height: 100vh;
+       font-size: 16px;
+       display: flex;
+       flex-direction: column;
+       color: white;
+       text-align: center;
+       line-height: 30px;
+       font-weight: 700;
+       background-image: url('backgroundscreen.jpg');
+       object-fit: cover;
+    }
+    .content p{
+       font-size: 18px;
+    }
+
 
 
     video{
@@ -124,6 +141,9 @@ input[type=submit]:hover {
 
      <video autoplay loop muted src="map video.mp4"></video>
 
+     <div class="cursor"></div>
+      <div class="cursor-blur"></div>
+
     <div class="container">
       <form action="/action_page.php">
       <div class="row" style="background-image: url('download.jpg');">
@@ -156,6 +176,22 @@ input[type=submit]:hover {
            <a href="#" style="color:white" class="btn">Forgot password?</a>
           </div>
        </div>
+       <div class="content">
+           <h1>Key Features</h1>
+           <p>
+              1.Efficient Routing: Cover more ground with less effort.<br>
+              2.Customizable Paths: Tailor routes based on your priorities.<br>
+              3.Real-time Updates: Stay informed with live traffic and road closure updates.
+           </p>
+           <h1>How It Works</h1>
+           <p>
+               1.Login: Access the system.<br>
+               2.Input Locations: Enter your destinations.<br>
+               3.Optimize Route: Get the most efficient path.<br>
+               4.Review and Confirm: Finalize your optimized route.<br>
+           </p>
+       </div>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="DisplayPath.css">
+</head>
+<body>
+    <video autoplay loop muted src="video1.webm"></video>
+
+    <div id="map" style="height: 500px; width: 100%;"></div>
+     
+    <script src="contact.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
+
+<script>
+let map1;
+function initMap() {
+    map1 = L.map('map').setView([0, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map1);
+}
+
+function displayShortestPath() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pathString = urlParams.get('path');
+    if (pathString) {
+        const path = pathString.split(';').map(location => {
+            const [lat, lng] = location.split(',');
+            return { lat: parseFloat(lat), lng: parseFloat(lng) };
+        });
+        const polyline = L.polyline(path.map(location => [location.lat, location.lng]), { color: 'blue' }).addTo(map1);
+        map1.fitBounds(polyline.getBounds());
+    }
+}
+
+window.onload = function() {
+    initMap();
+    displayShortestPath();
+}
+</script>

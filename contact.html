@@ -3,8 +3,6 @@
 <head>
      <link rel="stylesheet" href="contact.css">
 
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkdbLvyS-6gTFYSowG-rM_h7VaEzqYwWc"></script>
-
 </head>
 <body>
     <video 
@@ -29,28 +27,31 @@
         id="input2"
         />
 
-     <button onclick="addLocation();showNearestLocation();" type="submit" id="findlocation">Add Location</button>
+     <button onclick="addLocation()" type="submit" id="findlocation">Add Location</button>
      <button onclick="deleteTask()" style="margin-top: 20px;">Delete</button>
+     
+     <ul id="attractions" class="attractions"></ul>
 
       <div class="container">
 
            <div class="task-box" id="taskbox"></div>
 
          <div class="empty-box" id="emptybox"> 
-           
+         <div id="map" style="height: 500px; width: 100%;"></div>
 
-         </div>
+         <button id="calculatepath" onclick="calculateAndDisplayShortestPath()" style="margin-top: 20px;">Find Path</button>
 
-         <div id="map"></div>
+       </div>
 
        </div>
 
      </div>
+     
+
   </div>
      
     <script src="contact.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkdbLvyS-6gTFYSowG-rM_h7VaEzqYwWc&callback=showNearestLocation()"
-        async defer></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>

@@ -74,3 +74,16 @@ gsap.from(".about-us img,.about-us-in",{
         scrub:0.5
       }
 })
+
+gsap.from("#images",{
+      y:50,
+      opacity:0,
+      duration:1,
+      scrollTrigger:{
+         trigger :"#images",
+         scroller: "body",
+         start : "top 70%",
+         end:"top 67%",
+         scrub:0.5
+      }
+})
